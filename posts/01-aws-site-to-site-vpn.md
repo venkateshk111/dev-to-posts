@@ -292,11 +292,10 @@ To avoid unnecessary charges, clean up the resources:
 ## Pricing
 
 - **Not Free Tier Eligible:**
-  
-  - You are charged for each **VPN connection-hour** that your VPN connection is provisioned and available.
-  - Each partial hour is billed as a full hour.
-  - Standard AWS data transfer charges apply for all data transferred via the VPN connection.
-  - If you no longer need the VPN connection, terminate it to stop incurring charges.
+- You are charged for each **VPN connection-hour** that your VPN connection is provisioned and available.
+- Each partial hour is billed as a full hour.
+- Standard AWS data transfer charges apply for all data transferred via the VPN connection.
+- If you no longer need the VPN connection, terminate it to stop incurring charges.
   
 - **Approximate cost for this hands-on lab: $0.40 (INR 40).**
 
@@ -311,4 +310,3 @@ To avoid unnecessary charges, clean up the resources:
 - [AWS Site-to-Site VPN](https://aws.amazon.com/vpn/site-to-site-vpn/)
 - [AWS VPC Connectivity Options](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-site-to-site-vpn.html)
 - [Simulating VPN Customer Gateways](https://aws.amazon.com/blogs/networking-and-content-delivery/simulating-site-to-site-vpn-customer-gateways-strongswan/)
-
