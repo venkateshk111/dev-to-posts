@@ -2,7 +2,7 @@
 title: AWS Site-to-Site VPN
 published: false # if you set this to false it will publish the page as a draft
 description: Extend your on-premises networks to the cloud
-tags: 'AWS, site-to-site, vpn, networking'
+tags: 'AWS, sitetosite, networking'
 cover_image: ./assets/01-aws-site-to-site-vpn/01-site-to-site-vpn-venki.png
 canonical_url: null  # set this if you have a website you want to be promoted
 ---
