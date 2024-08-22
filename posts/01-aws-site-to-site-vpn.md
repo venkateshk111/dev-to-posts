@@ -2,7 +2,7 @@
 title: AWS Site-to-Site VPN
 published: false
 description: Extend your on-premises networks to the cloud
-tags: AWS, sitetosite, networking
+tags: 'AWS, sitetosite, networking'
 cover_image: ./assets/01-aws-site-to-site-vpn/01-site-to-site-vpn-venki.png
 canonical_url: null
 id: 1969432
