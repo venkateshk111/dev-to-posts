@@ -155,9 +155,6 @@ Both networks are not reachable.
 4. Wait for the site-to-site VPN to be provisioned.
     ![site-to-site-vpn](./assets/01-aws-site-to-site-vpn/06-site-to-site-vpn-provisioned.png)
 
-Here is the raw markdown version of the content:
-
-```markdown
 ## 3. Configuration on On-Premise Side
 
 - **Configure the Customer Gateway Device**
@@ -314,6 +311,3 @@ To avoid unnecessary charges, clean up the resources:
 - [AWS Site-to-Site VPN](https://aws.amazon.com/vpn/site-to-site-vpn/)
 - [AWS VPC Connectivity Options](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-site-to-site-vpn.html)
 - [Simulating VPN Customer Gateways](https://aws.amazon.com/blogs/networking-and-content-delivery/simulating-site-to-site-vpn-customer-gateways-strongswan/)
-```
-
-You can copy and paste this markdown into your preferred editor for further usage!
