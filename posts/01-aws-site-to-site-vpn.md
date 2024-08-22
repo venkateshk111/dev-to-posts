@@ -44,16 +44,16 @@ Extend your on-premises networks to the cloud
    - **AWS VPC**: Virtual Private Cloud (VPC) set up in your AWS account where the VPN will be setup.
 
 2. Configuration on AWS Side
-   - Create a virtual private gateway
-   - Create a customer gateway
-   - Configure routing
-   - Update your security group
-   - Create a VPN connection
-   - Download the configuration file
+    - Create a virtual private gateway
+    - Create a customer gateway
+    - Configure routing
+    - Update your security group
+    - Create a VPN connection
+    - Download the configuration file
 
 3. Configuration on On-Premise Side
 
-   - Configure the customer gateway device
+    - Configure the customer gateway device
 
 ## Site-to-Site VPN Hands-On
 
