@@ -39,21 +39,21 @@ Extend your on-premises networks to the cloud
 
 1. Pre-Requisites
 
-    - **On-premises IP address**: Public IP address of your customer gateway (your on-premises VPN device).
-    - **Routing type**: Decide whether to use static routing (you specify routes) or dynamic routing using Border Gateway Protocol (BGP).
-    - **AWS VPC**: Virtual Private Cloud (VPC) set up in your AWS account where the VPN will be setup.
+   - **On-premises IP address**: Public IP address of your customer gateway (your on-premises VPN device).
+   - **Routing type**: Decide whether to use static routing (you specify routes) or dynamic routing using Border Gateway Protocol (BGP).
+   - **AWS VPC**: Virtual Private Cloud (VPC) set up in your AWS account where the VPN will be setup.
 
 2. Configuration on AWS Side
-    - Create a virtual private gateway
-    - Create a customer gateway
-    - Configure routing
-    - Update your security group
-    - Create a VPN connection
-    - Download the configuration file
+   - Create a virtual private gateway
+   - Create a customer gateway
+   - Configure routing
+   - Update your security group
+   - Create a VPN connection
+   - Download the configuration file
 
 3. Configuration on On-Premise Side
 
-    - Configure the customer gateway device
+   - Configure the customer gateway device
 
 ## Site-to-Site VPN Hands-On
 
