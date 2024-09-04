@@ -5,6 +5,7 @@ description: Data about your EC2 instance
 tags: 'AWS, ec2, metadata'
 cover_image: ./assets/01-aws-site-to-site-vpn/00-aws-site-to-site-vpn-architecture-1000x420-devto.png
 canonical_url: null
+id: 1987080
 ---
 
 # Amazon EC2 Instance Metadata
