@@ -3,7 +3,7 @@ title: Amazon EC2 Auto Scaling
 published: false
 description: Handling Traffic Spikes - The Dynamic Scaling of EC2 Instances
 tags: 'AWS, EC2, AutoScaling' # do not use - (hyphen) in tags
-cover_image: <path to cover image> # Ex : ./assets/01-aws-site-to-site-vpn/00-aws-site-to-site-vpn-architecture-1000x420-devto.png
+cover_image: # Ex : ./assets/01-aws-site-to-site-vpn/00-aws-site-to-site-vpn-architecture-1000x420-devto.png
 canonical_url: null
 ---
 
