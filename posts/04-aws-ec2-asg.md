@@ -8,12 +8,13 @@ canonical_url: null
 ---
 
 # Amazon EC2 Auto Scaling
+<!-- 
+<img src="./assets/04-aws-ec2-asg/01-asg-az.png" alt="ASG" width="80%"> -->
 
-<img src="./assets/04-aws-ec2-asg/01-asg-az.png" alt="ASG" width="80%">
+![ASG](./assets/04-aws-ec2-asg/01-asg-az.png)
 
-<!-- ![ASG](./assets/04-aws-ec2-asg/02-asg.png) -->
+![ASG](./assets/04-aws-ec2-asg/02-asg.png)
 
-<img src="./assets/04-aws-ec2-asg/02-asg.png" alt="ASG" width="60%">
 
 ## Auto Scaling Groups (ASG)
 
@@ -173,7 +174,6 @@ canonical_url: null
 ### Instances in Service, `InService` 
 
 - Instances remain in the **`InService`** state until one of the following occurs:
-
     1. **Scale-In Event**: A scale-in event occurs, and Amazon EC2 Auto Scaling chooses to terminate this instance to reduce the size of the Auto Scaling group.
     2. **Standby State**: You put the instance into a Standby state.
     3. **Detach Instance**: You detach the instance from the Auto Scaling group.
