@@ -1,0 +1,42 @@
+---
+title: AWS Control Tower and Landing Zone
+published: false
+description: Automating AWS Multi-Account Management for Scalability and Security
+tags: 'AWS, ControlTower, LandingZone' # do not use - (hyphen) in tags
+cover_image: <path to cover image> # Ex : ./assets/01-aws-site-to-site-vpn/00-aws-site-to-site-vpn-architecture-1000x420-devto.png
+canonical_url: null
+---
+
+# AWS Control Tower and Landing Zone
+
+## AWS Landing Zone
+
+- A landing zone is a `well-architected`, `multi-account` AWS environment that is `scalable` and `secure`
+- Key Components of the landing zone
+    - 
+
+review this 
+https://aws.amazon.com/blogs/apn/reducing-the-cost-of-managing-multiple-aws-accounts-using-aws-control-tower/
+
+
+## AWS Control Tower
+
+
+## <Sub headings>
+
+## References
+
+- https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/understanding-landing-zones.html
+
+- https://aws.amazon.com/blogs/apn/reducing-the-cost-of-managing-multiple-aws-accounts-using-aws-control-tower/
+
+- https://d1.awsstatic.com/events/reinvent/2019/AWS_Control_Tower_versus_AWS_Landing_Zone_GPSTEC203.pdf
+
+- https://explore.skillbuilder.aws/learn/course/external/view/elearning/16132/designing-landing-zone-architectures-with-aws-control-tower
+
+
+
+
+
+- https://comprinno.net/cloud-migration/aws-control-tower-the-ultimate-guide-to-setting-up-your-landing-zone/
+
