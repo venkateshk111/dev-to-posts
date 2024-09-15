@@ -6,6 +6,7 @@ tags: 'AWS, sitetosite, networking'
 cover_image: ./assets/01-aws-site-to-site-vpn/00-aws-site-to-site-vpn-architecture-1000x420-devto.png
 canonical_url: null
 id: 1969432
+date: '2024-08-26T07:55:44Z'
 ---
 
 # AWS Site-to-Site VPN
