@@ -131,6 +131,9 @@ id: 2001804
     - Launch Hook: **Installing software**, **run scripts**,  or **configuring the instance** before an instance goes into service.
     - Terminate Hook: **Downloading logs**, **backup data**, or perform any **clean-up tasks** before an instance is terminated.
 
+  ![LifeCycle hooks](./assets/04-aws-ec2-asg/05-asg-lifecycle-hooks.png)
+
+
 - **Scale-Out Event**:
   - Instances launch and start in **Pending** state.
   - With `autoscaling:EC2_INSTANCE_LAUNCHING` hook:
@@ -152,7 +155,7 @@ id: 2001804
 
 ### Scale out
 
-![ScaleOut](./assets/04-aws-ec2-asg/05-asg-scale-out.png)
+![ScaleOut](./assets/04-aws-ec2-asg/06-asg-scale-out.png)
 
 - **Scale-Out Events**: Direct Auto Scaling group to launch and attach EC2 instances.
   - **Manual Increase**: Manually increase the size of the group.
@@ -182,7 +185,7 @@ id: 2001804
 
 ### Scale in
 
-![ScaleIn](./assets/04-aws-ec2-asg/05-asg-scale-in.png)
+![ScaleIn](./assets/04-aws-ec2-asg/06-asg-scale-in.png)
 
 - **Scale-In Events**
     - **Direct Auto Scaling Group**: Detach and terminate EC2 instances.
@@ -251,7 +254,7 @@ id: 2001804
 - Default version (Version 2 in this case) is used unless another version is specified
 - Allows for flexible configurations within a single launch template
 
-  ![Launch Template Versioning](./assets/04-aws-ec2-asg/06-asg-lt-versions.png)
+  ![Launch Template Versioning](./assets/04-aws-ec2-asg/07-asg-lt-versions.png)
 
 #### Version 1
 - Includes:
