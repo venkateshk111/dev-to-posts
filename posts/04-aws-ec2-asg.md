@@ -16,7 +16,6 @@ id: 2001804
 
 ![ASG](./assets/04-aws-ec2-asg/02-asg.png)
 
-
 ## Auto Scaling Groups (ASG)
 
 - An Auto Scaling Group is a **collection of EC2 instances** that are treated as a **logical grouping** for the purposes of **automatic scaling and management**
@@ -99,6 +98,7 @@ id: 2001804
     - Instance distribution may become uneven across Availability Zones.
     - Upon recovery, Amazon EC2 Auto Scaling re-balances the Auto Scaling group.
     - It launches instances in the enabled Availability Zones with the fewest instances and terminates instances elsewhere.
+
 
 ## Amazon EC2 Auto Scaling instance lifecycle
 
@@ -201,9 +201,84 @@ id: 2001804
     - **Request Redirection**: New requests are redirected to other instances, while existing connections continue until the de-registration delay expires.
 
 
-
-
 ## Launch Templates
+
+- Launch Templates are **instance configuration template** that an Auto Scaling group uses to launch EC2 instances
+- Launch templates are similar to launch configurations
+
+- Key components of launch templates:
+  - AMI ID
+  - Instance type
+  - Key pair
+  - Security groups
+  - Other EC2 instance parameters
+
+- Advantages over launch configurations:
+  - Support for multiple versions
+  - Ability to create subsets of parameters
+  - Reusability across versions
+
+- Versioning benefits:
+  - Can create a base configuration without AMI or user data
+  - Add specific AMI and user data in new versions
+  - Maintain general configuration parameters separately
+  - Delete testing versions when no longer needed
+
+- Recommended over launch configurations for:
+  - Access to latest features and improvements
+  - Support for advanced features like:
+    - Mixed Spot and On-Demand Instances
+    - Multiple instance types in one Auto Scaling group
+
+- Compatible with newer EC2 features:
+  - Systems Manager parameters (AMI ID)
+  - Current generation EBS Provisioned IOPS volumes (io2)
+  - EBS volume tagging
+  - T2 Unlimited instances
+  - Capacity Reservations
+  - Capacity Blocks
+  - Dedicated Hosts
+
+- Template creation:
+  - All parameters are optional
+  - Without an AMI specified, you can't add one when creating the Auto Scaling group
+  - If AMI is specified but no instance type, you can add instance types when creating the group
+
+### Launch Template Versioning
+
+- The diagram below shows a single launch template with three versions:
+- Each version can add or modify parameters
+- Default version (Version 2 in this case) is used unless another version is specified
+- Allows for flexible configurations within a single launch template
+
+  ![Launch Template Versioning](./assets/04-aws-ec2-asg/06-asg-lt-versions.png)
+
+#### Version 1
+- Includes:
+  - t2.micro instance type
+  - ami-1a2b
+  - subnet-1111
+  - key-pair-1
+- Basic configuration without security group
+
+#### Version 2 (Default)
+- Builds on Version 1
+- Adds:
+  - sg-2222 (security group)
+- Set as the default version
+- Will be used if no specific version is requested when launching an instance
+
+#### Version 3
+- Changes some parameters from previous versions
+- Uses:
+  - t2.medium instance type
+  - ami-3c4d
+- Keeps:
+  - subnet-1111
+  - key-pair-1 from Version 1
+- Adds:
+  - sg-3333 (different security group from Version 2)
+
 
 ### Launch Templates Vs Launch Configuration
 
