@@ -123,34 +123,6 @@ id: 2001804
 - **End**: The lifecycle of the instance has concluded.
 
 
-## ASG LifeCycle hooks
-
-- Lifecycle hooks are like a ***`pause`*** button in Amazon EC2 Auto Scaling activity
-- Lifecycle hooks let you **perform custom actions when instances are launched or terminated**
-- Use cases:
-    - Launch Hook: **Installing software**, **run scripts**,  or **configuring the instance** before an instance goes into service.
-    - Terminate Hook: **Downloading logs**, **backup data**, or perform any **clean-up tasks** before an instance is terminated.
-
-  ![LifeCycle hooks](./assets/04-aws-ec2-asg/05-asg-lifecycle-hooks.png)
-
-
-- **Scale-Out Event**:
-  - Instances launch and start in **Pending** state.
-  - With `autoscaling:EC2_INSTANCE_LAUNCHING` hook:
-    - Move to **Pending:Wait** state.
-    - Complete lifecycle action.
-    - Move to **Pending:Proceed** state.
-  - Fully configured instances attach to Auto Scaling group and enter **InService** state.
-
-- **Scale-In Event**:
-  - Instances terminate and detach from Auto Scaling group, entering **Terminating** state.
-  - With `autoscaling:EC2_INSTANCE_TERMINATING` hook:
-    - Move to **Terminating:Wait** state.
-    - Complete lifecycle action.
-    - Move to **Terminating:Proceed** state.
-  - Fully terminated instances enter **Terminated** state.
-
-
 ## Scale out, `InService`, Scale in
 
 ### Scale out
@@ -299,6 +271,79 @@ id: 2001804
 | Updates | Can be updated | Cannot be updated, must create new |
 
 
+## ASG LifeCycle hooks
+
+- Lifecycle hooks are like a ***`pause`*** button in Amazon EC2 Auto Scaling activity
+- Lifecycle hooks puts instances into a **`wait state` to perform custom actions** during launch or before termination.
+- Instances remain in a wait state until the lifecycle action is completed or the timeout period ends.
+- default Timeout: 1 hour
+- Use cases:
+    - **Launch (Scale-Out) Hook**: **Installing software**, **run scripts**,  or **configuring the instance** before an instance goes into service.
+      - Newly launched instance enters a wait state after startup
+      - Run scripts to download and install necessary software
+      - Ensure instance is fully ready before receiving traffic
+      - Use `complete-lifecycle-action` command to continue
+    
+    - **Terminate (Scale-In) Hook**: **Downloading logs**, **backup data**, or perform any **clean-up tasks** before an instance is terminated.
+      - Instance pauses before termination
+      - Send notification via Amazon EventBridge
+      - Allows actions like invoking AWS Lambda functions or connecting to the instance
+      - Opportunity to download logs or other data before full termination
+
+- Examples:
+  - Controlling instance registration with Elastic Load Balancing
+  - Ensuring bootstrap scripts complete successfully
+  - Verifying applications are ready to accept traffic
+  - Registering instances to the load balancer after lifecycle hook completion
+
+
+  ![LifeCycle hooks](./assets/04-aws-ec2-asg/05-asg-lifecycle-hooks.png)
+
+
+- **Scale-Out Event**:
+  - Instances launch and start in **Pending** state.
+  - With `autoscaling:EC2_INSTANCE_LAUNCHING` hook:
+    - Move to **Pending:Wait** state.
+    - Complete lifecycle action.
+    - Move to **Pending:Proceed** state.
+  - Fully configured instances attach to Auto Scaling group and enter **InService** state.
+
+- **Scale-In Event**:
+  - Instances terminate and detach from Auto Scaling group, entering **Terminating** state.
+  - With `autoscaling:EC2_INSTANCE_TERMINATING` hook:
+    - Move to **Terminating:Wait** state.
+    - Complete lifecycle action.
+    - Move to **Terminating:Proceed** state.
+  - Fully terminated instances enter **Terminated** state.
+
+## ASG Warm pool
+
+- *warm pool* helps to **decreases latency for applications with long boot times**.
+- *warm pool* **ensures instances are ready to quickly start serving application traffic during a scale-out event**.
+- Instances in the warm pool count toward the desired capacity when they leave the pool (known as a warm start).
+- **Instance States**: Instances in the warm pool can be in one of three states: Stopped, Running, or Hibernated.
+  - **Stopped**: Minimizes costs, pay only for volumes and Elastic IP addresses.
+  - **Hibernated**: Saves RAM contents to Amazon EBS root volume, pay for EBS volumes and Elastic IP addresses.
+  - **Running**: Discouraged to avoid unnecessary charges.
+
+- **Warm Pool Size**:
+  - **Default size**: maximum capacity - desired capacity = Default warm pool size
+    - Example: if maximum capacity = 10 and Desired capacity = 6 than Warm pool size = 10-6 = 4.
+    - 
+  - **Custom size**: Use `MaxGroupPreparedCapacity` option to set a custom value.
+    - Example : Maximum capacity = 20, Desired capacity = 6, custom capacity = 8 than Warm pool size = 2.
+
+- **Lifecycle Hooks**:
+  - Put instances into a wait state for custom actions during launch or termination.
+  - Delay instances from being stopped or hibernated until they finish initializing.
+
+- **Instance Reuse Policy**:
+  - Default: Terminates instances when scaling in and launches new instances into the warm pool.
+  - Reuse Policy: Return instances to the warm pool instead of terminating them, ensuring the pool is not over-provisioned.
+
+
+
+
 
 
 
@@ -307,4 +352,6 @@ id: 2001804
 ## References
 
 - https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-benefits.html
+
+- https://aws.amazon.com/blogs/compute/scaling-your-applications-faster-with-ec2-auto-scaling-warm-pools/
 
