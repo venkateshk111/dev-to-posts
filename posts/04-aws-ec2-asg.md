@@ -316,7 +316,7 @@ id: 2001804
     - Move to **Terminating:Proceed** state.
   - Fully terminated instances enter **Terminated** state.
 
-## ASG Warm pool
+## ASG Warm Pool
 
 - *warm pool* helps to **decreases latency for applications with long boot times**.
 - *warm pool* **ensures instances are ready to quickly start serving application traffic during a scale-out event**.
@@ -329,7 +329,6 @@ id: 2001804
 - **Warm Pool Size**:
   - **Default size**: maximum capacity - desired capacity = Default warm pool size
     - Example: if maximum capacity = 10 and Desired capacity = 6 than Warm pool size = 10-6 = 4.
-    - 
   - **Custom size**: Use `MaxGroupPreparedCapacity` option to set a custom value.
     - Example : Maximum capacity = 20, Desired capacity = 6, custom capacity = 8 than Warm pool size = 2.
 
@@ -342,7 +341,84 @@ id: 2001804
   - Reuse Policy: Return instances to the warm pool instead of terminating them, ensuring the pool is not over-provisioned.
 
 
+## ASG Scaling
 
+- ***Scaling*** in AWS Auto Scaling Group (ASG) refers to the **automatic adjustment of the number of EC2 instances** in response to changes in demand for your application. 
+- AWS ASG ensures that your application has the right amount of compute capacity at any given time by **scaling out** (increasing instances) or **scaling in** (decreasing instances) based on predefined conditions or policies
+- **Scaling Out**: Adding more instances to handle an increase in traffic or workload.
+- **Scaling In** : Reducing the number of instances when the demand decreases, saving costs.
+
+
+### Types of Scaling
+
+### 1. Manual Scaling
+  - Manually adjust the number of instances in the ASG.
+  - Useful for predictable workloads or during testing.
+
+    ![Manual Scaling](./assets/04-aws-ec2-asg/08-asg-ms.png)
+
+### 2. Automatic Scaling
+
+- ### Scheduled Scaling:
+  - **How it Works**: Scale based on a schedule.Scales the number of instances up or down at predetermined times.
+  - **Example**: 
+    - Maintain 4 desired instance 6 max and 2 min at specific time of the day.
+    - Add 5 instances at 8 AM every weekday, remove 5 instances at 6 PM.
+  - **Use Case**: 
+    - Ideal for predictable load changes, such as daily or weekly traffic patterns.
+
+    ![Scheduled Scaling](./assets/04-aws-ec2-asg/09-asg-schs.png)
+
+- ### Predictive Scaling:
+   - Uses machine learning to analyze historical load patterns.
+   - Proactively scales capacity up or down based on predictions.
+
+      ![Predictive Scaling](./assets/04-aws-ec2-asg/10-asg-pc.png)
+
+- ### Dynamic Scaling:
+    - Automatically scale based on real-time metrics.
+    - **Uses CloudWatch alarms** to trigger scaling actions.
+    - 3 Types of Dynamic Scaling Policies
+      1. Simple Scaling
+      2. Step Scaling
+      3. Target Tracking Scaling
+
+        
+      ![Dynamic Scaling](./assets/04-aws-ec2-asg/13-asg-dynamic.png)
+
+  #### 1. Simple Scaling Policy
+    - **How it Works**: Adds or removes a fixed number of instances when a specific **metric** breaches a threshold.
+    - **Example**: Add 1 instance when CPU utilization exceeds 75%, remove 1 instance when CPU falls below 30%.
+    - **Use Case**: Suitable for basic scaling needs.
+
+      ![Simple Scaling](./assets/04-aws-ec2-asg/08-asg-sc.png)
+
+  #### 2. Step Scaling Policy
+    - **How it Works**: Scales in steps based on how much the monitored **metric** deviates from the threshold.
+    - **Example**: 
+      - CPU usage > 70%, add 2 instances.
+      - CPU usage > 80%, add 4 instances.
+      - CPU usage < 30%, remove 1 instance.
+    - **Use Case**: Ideal for handling variable demand with predefined increments.
+
+      ![Step Scaling](./assets/04-aws-ec2-asg/11-asg-step.png)
+
+  #### 3. Target Tracking Scaling Policy
+    - **How it Works**: Adjusts the instance count to maintain a target value for a specific CloudWatch **metric** (e.g., CPU utilization).
+    - **Example**: Set a target CPU utilization to 50%. ASG will scale instances to maintain this target.
+    - **Use Case**: Best for maintaining consistent performance.
+    
+      ![alt text](./assets/04-aws-ec2-asg/12-asg-target.png)
+
+
+### Comparison of Scaling Policies
+
+| **Scaling Policy**         | **Trigger**                             | **Scaling Behavior**                     | **Use Case**                          |
+|----------------------------|-----------------------------------------|------------------------------------------|---------------------------------------|
+| **Scheduled Scaling**       | Predefined time intervals               | Scaling occurs at specified times        | Predictable workload patterns         |
+| **Simple Scaling**          | Metric breaches a threshold             | Fixed increase or decrease in instances  | Basic threshold-based scaling         |
+| **Step Scaling**            | Metric exceeds/falls below thresholds   | Scales in increments based on metric deviations | Variable traffic with sharp demand changes |
+| **Target Tracking**         | CloudWatch metric reaching a target     | Scales to maintain a target metric       | Continuous, steady-state applications |
 
 
 
