@@ -393,7 +393,7 @@ id: 2001804
 
      ![Simple Scaling](./assets/04-aws-ec2-asg/08-asg-sc.png)
 
- #### 2. Step Scaling Policy
+#### 2. Step Scaling Policy
    - **How it Works**: Scales in steps based on how much the monitored *metric* deviates from the threshold.
    - **Example**: 
      - CPU usage > 75%, add 2 instances.
@@ -403,13 +403,12 @@ id: 2001804
 
      ![Step Scaling](./assets/04-aws-ec2-asg/11-asg-step.png)
 
-
- #### 3. Target Tracking Scaling Policy
+#### 3. Target Tracking Scaling Policy
    - **How it Works**: Adjusts the instance count to maintain a target value for a specific CloudWatch *metric* (e.g., CPU utilization).
    - **Example**: Set a target CPU utilization to 50%. ASG will scale instances to maintain this target.
    - **Use Case**: Best for maintaining consistent performance.
     
-     ![Target Tracking](./assets/04-aws-ec2-asg/12-asg-target.png)
+      ![alt text](./assets/04-aws-ec2-asg/12-asg-target.png)
 
 
 ### Comparison of Scaling Policies
