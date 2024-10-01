@@ -3,7 +3,7 @@ title: Amazon EC2 Auto Scaling
 published: false
 description: Handling Traffic Spikes - The Dynamic Scaling of EC2 Instances
 tags: 'AWS, EC2, AutoScaling'
-cover_image: ./assets/01-aws-site-to-site-vpn/00-aws-asg-1000x420-devto.png
+cover_image: ./assets/04-aws-ec2-asg/00-aws-asg-1000x420-devto.png
 canonical_url: null
 id: 2001804
 ---
