@@ -6,6 +6,7 @@ tags: 'AWS, EC2, AutoScaling'
 cover_image: ./assets/04-aws-ec2-asg/00-aws-asg-1000x420-devto.png
 canonical_url: null
 id: 2001804
+date: '2024-10-01T06:37:25Z'
 ---
 
 # Amazon EC2 Auto Scaling
