@@ -36,6 +36,11 @@ id: 2001804
     - Amazon EC2 Auto Scaling can dynamically increase and decrease capacity as needed. 
     - You pay for the EC2 instances you use, you save money by launching instances when they are needed and terminating them when they aren't.
 
+### Pricing for Amazon EC2 Auto Scaling
+
+- There are **no additional fees with Amazon EC2 Auto Scaling**. 
+- You only pay for the AWS resources (for example, EC2 instances, EBS volumes, and CloudWatch alarms) that you use.
+
 
 ## Understanding the Need for Amazon EC2 Auto Scaling
 
@@ -259,7 +264,7 @@ id: 2001804
 
 | Feature | Launch Template | Launch Configuration |
 |---------|-----------------|----------------------|
-| Introduction | Newer and more flexible | Older and less flexible |
+| State | Newer and more flexible | Older and less flexible |
 | Modification | Can be modified after creation | Cannot be modified once created |
 | Versioning | Supports versioning | Does not support versioning |
 | Use Cases | EC2 instances, Spot Fleets, and ASGs | Only ASGs |
