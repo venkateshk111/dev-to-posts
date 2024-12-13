@@ -69,6 +69,7 @@ id: 2155472
 3. ***`terraform fmt`*** : *format* terraform code
 4. ***`terraform plan`*** : *Review* the terraform plan
 5. ***`terraform apply`*** : *Create* Resources by terraform
+    
     - Example of *`terraform apply`*
         ![terraform apply](./assets/01-tf-meta-argument-count/01-tf-apply-01.png)
         ![terraform apply](./assets/01-tf-meta-argument-count/01-tf-apply-02.png)
@@ -110,4 +111,6 @@ id: 2155472
 ## References
 
 - [The count Meta-Argument](https://developer.hashicorp.com/terraform/language/meta-arguments/count)
+
+
 
