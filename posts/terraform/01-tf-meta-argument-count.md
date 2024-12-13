@@ -2,9 +2,10 @@
 title: Terraform Meta Argument Count
 published: false
 description: Meta Arguments
-tags: 'terraform, metaargument, count' # do not use - (hyphen) in tags
-cover_image: ./assets/01-tf-meta-argument-count/00-aws-site-to-site-vpn-architecture-1000x420-devto.png # Ex : ./assets/01-aws-site-to-site-vpn/00-aws-site-to-site-vpn-architecture-1000x420-devto.png
+tags: 'terraform, metaargument, count'
+cover_image: ./assets/01-tf-meta-argument-count/00-aws-site-to-site-vpn-architecture-1000x420-devto.png
 canonical_url: null
+id: 2155472
 ---
 
 # Terraform Meta Argument : Count
