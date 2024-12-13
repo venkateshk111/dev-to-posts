@@ -28,8 +28,8 @@ canonical_url: null
 
 - **Note** : A **given resource or module block cannot use both ***count***** and ***for_each*** .
 
-- **Example**:  
-    [00_provider.tf](./assets/01-tf-meta-argument-count/00_provider.tf)
+- **Example**: 
+    provider.tf
     ```hcl
     terraform {
     required_providers {
@@ -52,7 +52,7 @@ canonical_url: null
     }
     ```
 
-    [01_ec2.tf](./assets/01-tf-meta-argument-count/01_ec2.tf)
+    01_ec2.tf
     ```hcl
     resource "aws_instance" "example" {
         count = 2 # Using Meta argument to create 2 identical EC2 Instances
@@ -63,31 +63,31 @@ canonical_url: null
 
 - Lets Execute Terraform commands to understand resource behavior
 
-    1. ***`terraform init`*** : *Initialize* terraform
-    2. ***`terraform validate`*** : *Validate* terraform code
-    3. ***`terraform fmt`*** : *format* terraform code
-    4. ***`terraform plan`*** : *Review* the terraform plan
-    5. ***`terraform apply`*** : *Create* Resources by terraform
-        - Example of *`terraform apply`*
-            ![terraform apply](./assets/01-tf-meta-argument-count/01-tf-apply-01.png)
-            ![terraform apply](./assets/01-tf-meta-argument-count/01-tf-apply-02.png)
+1. ***`terraform init`*** : *Initialize* terraform
+2. ***`terraform validate`*** : *Validate* terraform code
+3. ***`terraform fmt`*** : *format* terraform code
+4. ***`terraform plan`*** : *Review* the terraform plan
+5. ***`terraform apply`*** : *Create* Resources by terraform
+    - Example of *`terraform apply`*
+        ![terraform apply](./assets/01-tf-meta-argument-count/01-tf-apply-01.png)
+        ![terraform apply](./assets/01-tf-meta-argument-count/01-tf-apply-02.png)
 
-        - After you type ***yes*** to *`terraform apply`* prompt, terraform will start **creating** resources.
-            ![terraform apply](./assets/01-tf-meta-argument-count/03-tf-apply-gif.gif)
-            ![terraform apply](./assets/01-tf-meta-argument-count/03-tf-apply-img.png)
+    - After you type ***yes*** to *`terraform apply`* prompt, terraform will start **creating** resources.
+        ![terraform apply](./assets/01-tf-meta-argument-count/03-tf-apply-gif.gif)
+        ![terraform apply](./assets/01-tf-meta-argument-count/03-tf-apply-img.png)
 
-        - Once terraform completes the execution you should be able to check on your AWS Console 2 EC2 Instance created successfully
-            ![terraform apply](./assets/01-tf-meta-argument-count/04-tf-aws-ec2.png)
+    - Once terraform completes the execution you should be able to check on your AWS Console 2 EC2 Instance created successfully
+        ![terraform apply](./assets/01-tf-meta-argument-count/04-tf-aws-ec2.png)
  
-    6. ***`terraform destroy`*** : *destroy or delete* Resources, Cleanup the resources we created
-        - After you type ***yes*** to *`terraform destroy`* prompt, terraform will start **destroying** resources
+6. ***`terraform destroy`*** : *destroy or delete* Resources, Cleanup the resources we created
+    - After you type ***yes*** to *`terraform destroy`* prompt, terraform will start **destroying** resources
 
-        ![terraform destroy](./assets/01-tf-meta-argument-count/05-tf-destroy-gif.gif)
-        ![terraform destroy](./assets/01-tf-meta-argument-count/05-tf-destroy-img.png)
+    ![terraform destroy](./assets/01-tf-meta-argument-count/05-tf-destroy-gif.gif)
+    ![terraform destroy](./assets/01-tf-meta-argument-count/05-tf-destroy-img.png)
 
 
-        - Once terraform completes the execution you should be able to check on your AWS Console both EC2 successfully terminated.
-        ![terraform destroy](./assets/01-tf-meta-argument-count/05-tf-destroy-aws.png)
+    - Once terraform completes the execution you should be able to check on your AWS Console both EC2 successfully terminated.
+    ![terraform destroy](./assets/01-tf-meta-argument-count/05-tf-destroy-aws.png)
 
 -  #### ***`count.index`*** 
     - Example Code for  ***count.index*** 
