@@ -7,9 +7,9 @@ cover_image: ./assets/05-aws-quick-guide-s3/00-aws-quick-guide-s3-1000x420-devto
 canonical_url: null
 id: 2184277
 ---
-# Amazon S3
+## Amazon S3
 
-## Key Concepts
+### Key Concepts
 
 - Amazon S3 (Simple Storage Service) is an ***object storage*** service designed for:
     - **Scalability**
