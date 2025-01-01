@@ -1,5 +1,5 @@
 ---
-title: AWS Quick Guide: Amazon S3
+title: AWS Quick Guide - Amazon S3
 published: false
 description: Get Started with Amazon S3
 tags: 'AWS, S3, LetUsCloud'
