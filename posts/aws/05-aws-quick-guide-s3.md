@@ -5,6 +5,7 @@ description: Get Started with Amazon S3
 tags: 'AWS, S3, LetUsCloud'
 cover_image: ./assets/05-aws-quick-guide-s3/00-aws-quick-guide-s3-1000x420-devto.png
 canonical_url: null
+id: 2184277
 ---
 # Amazon S3
 
