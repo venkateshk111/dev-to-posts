@@ -109,7 +109,8 @@ The new exam SAA-C03 started from **Aug-2022**. Only the weight distribution for
 Are you preparing for SAA-C03? Have doubts or want to collaborate for AWS/DevOps certifications? Connect:
 
 - [![Twitter Logo](https://img.shields.io/badge/Twitter-venkatesh111-1DA1F2?logo=twitter&logoColor=white)](https://twitter.com/venkatesh111)
-- [![LinkedIn Logo](https://img.shields.io/badge/LinkedIn-venkatesh111-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/venkatesh111/)
+- LinkedIn: [venkatesh111](https://www.linkedin.com/in/venkatesh111/)
+
 
 If planning for **AWS Certified Developer Associate**, see: [AWS DVA-C01 Cheat Sheet](https://sites.google.com/view/aws-dva-c01-cheat-sheet)
 
