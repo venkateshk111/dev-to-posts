@@ -1,6 +1,6 @@
 ---
 title: AWS Solutions Architect Associate Cheat Sheet
-published: false
+published: true
 description: AWS Solutions Architect Associate Cheat Sheet
 tags: 'AWS, SAAC03, LetUsCloud'
 cover_image: null
