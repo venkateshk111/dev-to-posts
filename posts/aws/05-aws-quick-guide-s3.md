@@ -6,6 +6,7 @@ tags: 'AWS, S3, LetUsCloud'
 cover_image: ./assets/05-aws-quick-guide-s3/00-aws-quick-guide-s3-1000x420-devto.png
 canonical_url: null
 id: 2184277
+date: '2025-01-01T14:20:15Z'
 ---
 ## Amazon S3
 
