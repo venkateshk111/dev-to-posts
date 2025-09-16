@@ -2,7 +2,7 @@
 title: How Adding an Additional EBS Volume to Existing EC2 Almost Broke My Terraform AWS Workflow and Threatened Our Project Deadline
 published: false
 description: AWS Terraform Provider Issue and Fix
-tags: 'aws, terraform, ec2, ebs, letuscloud'
+tags: 'aws, terraform, letuscloud'
 cover_image: ./assets/02-tf-aws-ebs-ec2-replacement-fix/00-tf-aws-provider-fix-1000x420-devto.png
 canonical_url: null
 ---
