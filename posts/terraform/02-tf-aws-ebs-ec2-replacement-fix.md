@@ -39,7 +39,7 @@ So my current Terraform configuration looked something like this:
 
 - I was using AWS provider <= 5.8.0
 
-    - ![Terraform Provider](./assets/02-tf-aws-ebs-ec2-replacement-fix/01-tf-provider-580.png)
+- ![Terraform Provider](./assets/02-tf-aws-ebs-ec2-replacement-fix/01-tf-provider-580.png)
 
 - I was using AWS EC2 module 5.8.0
 - I added new EBS volume terraform block and tried to run the terraform plan  
@@ -55,7 +55,7 @@ So my current Terraform configuration looked something like this:
         ]
     ```
 
-    - ![Terraform EC2 Module](./assets/02-tf-aws-ebs-ec2-replacement-fix/02-aws-ec2-module-580.png)
+- ![Terraform EC2 Module](./assets/02-tf-aws-ebs-ec2-replacement-fix/02-aws-ec2-module-580.png)
 
 With happy mind i ran *`terraform plan`* and to my surprise terraform was planning to replace the EC2 instance, instead of adding the new volume 😲
 
@@ -99,17 +99,16 @@ So here is what I did :
 
 - I updated the AWS provider version to 6.0.0
 
-    - ![Terraform Provider](./assets/02-tf-aws-ebs-ec2-replacement-fix/04-tf-provider-600.png)
+- ![Terraform Provider](./assets/02-tf-aws-ebs-ec2-replacement-fix/04-tf-provider-600.png)
 
 - I updated the EC2 module to use module version 6.0.0 
 - I updated my EC2 terraform code to match the new way of defining root volumes and EBS volumes as per version 6.0.0
 
-    - ![Terraform EC2 Module](./assets/02-tf-aws-ebs-ec2-replacement-fix/05-aws-ec2-module-600.png)
-
+- ![Terraform EC2 Module](./assets/02-tf-aws-ebs-ec2-replacement-fix/05-aws-ec2-module-600.png)
 
 - Ran *`terraform init -upgrade`* so my terraform can pull latest configurations
 
-    - ![Terraform init upgrade](./assets/02-tf-aws-ebs-ec2-replacement-fix/06-tf-init-upgrade.png)
+- ![Terraform init upgrade](./assets/02-tf-aws-ebs-ec2-replacement-fix/06-tf-init-upgrade.png)
 
 - Ran *`terraform plan`* , plan looked good
 
@@ -118,7 +117,6 @@ So here is what I did :
 - Ran *`terraform apply`* 
 
 - ![Terraform apply](./assets/02-tf-aws-ebs-ec2-replacement-fix/08-tf-apply-600.png)
-
 
 ## The Result
 
@@ -152,8 +150,6 @@ If you would like to try this on your lab environment, I created simple terrafor
 - AWS EC2 Instance behavior with provider version 6.0.0 : [venkateshk111/terraform-aws-ec2-6.0.0](https://github.com/venkateshk111/terraform-aws-ec2-6.0.0)
 
 - Real time scenario where we update the provider version from 5.8.0 to 6.0.0 : [venkateshk111/terraform-aws-provider-6-additional-ebs-ec2-replacement-fix](https://github.com/venkateshk111/terraform-aws-provider-6-additional-ebs-ec2-replacement-fix)
-
-
 
 ## References
 - Issues
