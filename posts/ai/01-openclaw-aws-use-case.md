@@ -3,7 +3,7 @@ title: I Gave an AI Agent Access to My AWS Account - Here's What It Found
 published: false
 description: OpenClaw AWS Use Case
 tags: 'aws, openclaw, aiagents, letuscloud'
-cover_image: ./assets/00-openclaw-aws-use-case/01-openclaw-aws-use-case-1000x420-devto.png
+cover_image: ./assets/01-openclaw-aws-use-case/00-openclaw-aws-use-case-1000x420-devto.png
 canonical_url: https://www.linkedin.com/pulse/i-gave-ai-agent-access-my-aws-account-heres-what-found-venkatesh-k-rwq4c/
 ---
 
