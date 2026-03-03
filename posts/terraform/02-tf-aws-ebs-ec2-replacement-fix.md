@@ -6,6 +6,7 @@ tags: 'aws, terraform, letuscloud'
 cover_image: ./assets/02-tf-aws-ebs-ec2-replacement-fix/00-tf-aws-provider-fix-1000x420-devto.png
 canonical_url: null
 id: 2849811
+date: '2025-09-17T10:31:15Z'
 ---
 
 ## The Problem That Hit Me
