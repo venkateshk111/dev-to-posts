@@ -4,7 +4,8 @@ published: false
 description: AWS Bedrock and Claude Code
 tags: 'aws, amazonbedrock, claudecode, letuscloud'
 cover_image: ./assets/02-aws-bedrock-claude-code/00-aws-bedrock-claude-code-1000x420-devto.png
-canonical_url:
+canonical_url: null
+id: 3907065
 ---
 
 # How My First Claude Code on AWS Bedrock Experiment Cost Me $8.43 in Just One Day
