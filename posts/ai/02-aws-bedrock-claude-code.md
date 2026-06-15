@@ -7,7 +7,7 @@ cover_image: ./assets/02-aws-bedrock-claude-code/00-aws-bedrock-claude-code-1000
 canonical_url:
 ---
 
-# How My First Claude Code on AWS Bedrock Experiment Cost Me $8.43 in Just One Day
+## My AWS Bedrock Experiment Cost Me $8.43 in Just One Day
 
 *What I learned about AWS Bedrock pricing the hard way, and why budget alerts saved me*
 
