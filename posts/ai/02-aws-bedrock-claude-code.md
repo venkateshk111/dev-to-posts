@@ -2,7 +2,7 @@
 title: How My First Claude Code on AWS Bedrock Experiment Cost Me $8.43 in Just One Day
 published: false
 description: AWS Bedrock and Claude Code
-tags: 'aws, amazonbedrock, claudecode, letuscloud'
+tags: 'aws, amazonbedrock, claudecode, awscommunity'
 cover_image: ./assets/02-aws-bedrock-claude-code/00-aws-bedrock-claude-code-1000x420-devto.png
 canonical_url: null
 id: 3907065
@@ -183,5 +183,16 @@ Learned this one the slightly expensive way. Hopefully this saves someone else f
 
 ---
 
-**Connect:** [X@venkatesh111](https://x.com/venkatesh111) | [YouTube@LetUsCloud](https://www.youtube.com/@letuscloud) | [LinkedIn@venkatesh111](https://www.linkedin.com/in/venkatesh111/)
+Thanks for reading! If this was helpful:
 
+- ❤️ Like if it added value
+- 💾 Save for later
+- 🔄 Share with your team
+
+**Let's connect and discuss Cloud:** 
+
+- [LinkedIn : @venkatesh111](https://www.linkedin.com/in/venkatesh111/)
+- [X        : @venkatesh111](https://x.com/venkatesh111) 
+- [YouTube  : @LetUsCloud](https://www.youtube.com/@letuscloud)
+
+#AWS, #AmazonBedrock, #ClaudeCode, #AWSBudgets, #AITools, #AWScommunity #LetUsCloud
