@@ -6,6 +6,7 @@ tags: 'aws, amazonbedrock, claudecode, awscommunity'
 cover_image: ./assets/02-aws-bedrock-claude-code/00-aws-bedrock-claude-code-1000x420-devto.png
 canonical_url: null
 id: 3915085
+date: '2026-06-16T11:00:48Z'
 ---
 
 ## My AWS Bedrock Experiment Cost Me $8.43 in Just One Day

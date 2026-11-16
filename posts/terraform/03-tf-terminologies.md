@@ -1,10 +1,11 @@
 ---
 title: Terraform Terminologies Explained for Beginners with AWS Examples
 published: false
-description: "Learn Terraform terminologies in simple words: blocks, providers, resources, variables, modules and state, with AWS examples"
+description: 'Learn Terraform terminologies in simple words: blocks, providers, resources, variables, modules and state, with AWS examples'
 tags: 'aws, terraform, devops, letuscloud'
 cover_image: ./assets/03-tf-terminologies/00-tf-terminologies-1000x420-dev.png
 canonical_url: null
+id: 5048677
 ---
 
 # Terraform Terminologies
